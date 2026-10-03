@@ -1,0 +1,51 @@
+{
+  "barang": {
+    "mic_01": {
+      "kategori": "kat_mic",
+      "nama": "Shure SM 58",
+      "stok_dipinjam": 0,
+      "stok_rusak": 5,
+      "stok_tersedia": 5,
+      "stok_total": 10
+    },
+    "mic_02": {
+      "kategori": "kat_mic",
+      "nama": "ealsem SM 58",
+      "stok_dipinjam": 0,
+      "stok_rusak": 5,
+      "stok_tersedia": 0,
+      "stok_total": 5
+    },
+    "mic_03": {
+      "kategori": "kat_mic",
+      "nama": "SPL Wireless isi 2",
+      "stok_dipinjam": 0,
+      "stok_rusak": 0,
+      "stok_tersedia": 2,
+      "stok_total": 2
+    }
+  },
+  "kategori": {
+    "kat_kabel": {
+      "nama": "Kabel"
+    },
+    "kat_laptop": {
+      "nama": "Laptop"
+    },
+    "kat_mic": {
+      "nama": "Mic"
+    },
+    "kat_mixer": {
+      "nama": "Mixer"
+    },
+    "kat_musik": {
+      "nama": "Alat Musik"
+    },
+    "kat_speaker": {
+      "nama": "Speaker"
+    },
+    "kat_video": {
+      "nama": "Video"
+    }
+  }
+}

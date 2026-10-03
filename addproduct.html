@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Product</title>
+    <!-- Menggunakan FontAwesome via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Menghubungkan ke file CSS eksternal -->
+    <link rel="stylesheet" href="assets/css/addproduct.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Area Sidebar Kiri -->
+    <div id="sidebar-container"></div>
+
+    <!-- Area Konten Utama Kanan -->
+    <main class="main-content">
+        <!-- Topbar Atas -->
+        <div id="topbar-container"></div>
+    <section class="content-body">
+            
+            <!-- Area Form (Create) -->
+            <!-- Area Form (Khusus Create Baru) -->
+        <div class="table-container">
+            <h2 class="table-title">Tambah Barang Baru</h2>
+            <form id="form-add" class="form-grid">
+                <div class="form-group">
+                    <label>Kode Barang (ID)</label>
+                    <input type="text" id="add_kode" class="form-control" required placeholder="Contoh: mic_05">
+                </div>
+                <div class="form-group">
+                    <label>Nama Barang</label>
+                    <input type="text" id="add_nama" class="form-control" required placeholder="Contoh: Shure SM58">
+                </div>
+                <div class="form-group">
+                    <label>Kategori</label>
+                    <select id="add_kategori" class="form-control" required>
+                        <option value="">Memuat kategori...</option>
+                    </select>
+                </div>
+                <div style="display: flex; gap: 15px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label>Stok Total</label>
+                        <input type="number" id="add_stok_total" class="form-control" required min="0" value="0">
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label>Stok Rusak</label>
+                        <input type="number" id="add_stok_rusak" class="form-control" required min="0" value="0">
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Tambah Barang</button>
+                </div>
+            </form>
+        </div>
+
+            <!-- Area Tabel (Read) -->
+            <div class="table-container">
+    <!-- Container Flex untuk menyejajarkan Judul dan Filter -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
+        <h2 class="table-title" style="margin-bottom: 0;">Daftar Semua Barang</h2>
+        
+        <!-- Dropdown Filter -->
+        <div style="display: flex; gap: 10px;">
+            <select id="filter-kategori" class="form-control" style="width: auto; padding: 5px 10px;">
+                <option value="all">Semua Kategori</option>
+                <!-- Opsi kategori akan dimuat oleh JS -->
+            </select>
+            <select id="filter-kondisi" class="form-control" style="width: auto; padding: 5px 10px;">
+                <option value="all">Semua Kondisi</option>
+                <option value="baik">Baik</option>
+                <option value="rusak">Rusak</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Kode</th>
+                    <th>Nama Barang</th>
+                    <th>Kategori</th>
+                    <th>Stok</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="tabel-semua-barang">
+                <tr><td colspan="6" style="text-align: center;">Memuat data...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+        </section>
+    </main>
+
+    <!-- POPUP MODAL UNTUK EDIT (Tambahkan di atas tag <script>) -->
+<div id="editModal" class="modal">
+    <div class="modal-content table-container">
+        <span class="close-modal">&times;</span>
+        <h2 class="table-title" id="edit-title">Edit Barang</h2>
+        <form id="form-edit" class="form-grid">
+            <input type="hidden" id="edit_stok_dipinjam">
+            <div class="form-group">
+                <label>Kode Barang (ID - Terkunci)</label>
+                <input type="text" id="edit_kode" class="form-control" readonly style="background-color: var(--bg-main); opacity: 0.7;">
+            </div>
+            <div class="form-group">
+                <label>Nama Barang</label>
+                <input type="text" id="edit_nama" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Kategori</label>
+                <select id="edit_kategori" class="form-control" required></select>
+            </div>
+            <div style="display: flex; gap: 15px;">
+                <div class="form-group" style="flex: 1;">
+                    <label>Stok Total</label>
+                    <input type="number" id="edit_stok_total" class="form-control" required min="0">
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Stok Rusak</label>
+                    <input type="number" id="edit_stok_rusak" class="form-control" required min="0">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Update Data</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <!-- Script Layout & Logika Khusus Halaman Ini -->
+    <script src="assets/js/layout.js"></script>
+    <script type="module" src="assets/js/addproduct.js"></script>
+</body>
+</html>

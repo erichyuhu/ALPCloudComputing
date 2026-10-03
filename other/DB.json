@@ -1,0 +1,71 @@
+{
+  "kategori": {
+    "kat_video": { "nama": "Video" },
+    "kat_mixer": { "nama": "Mixer" },
+    "kat_speaker": { "nama": "Speaker" },
+    "kat_musik": { "nama": "Alat Musik" },
+    "kat_mic": { "nama": "Mic" },
+    "kat_kabel": { "nama": "Kabel" },
+    "kat_laptop": { "nama": "Laptop" }
+  },
+
+  "barang": {
+    "vid_01": { "nama": "Sony HD CAM", "kategori": "kat_video", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "vid_02": { "nama": "Sony SDI CAM", "kategori": "kat_video", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "vid_03": { "nama": "Sony 4K CAM", "kategori": "kat_video", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "vid_04": { "nama": "Sony A6600", "kategori": "kat_video", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "vid_05": { "nama": "Sony A7S", "kategori": "kat_video", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "vid_06": { "nama": "Canon 7D", "kategori": "kat_video", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "vid_07": { "nama": "Canon 500D", "kategori": "kat_video", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+
+    "mix_01": { "nama": "Zoom Livetrack L8", "kategori": "kat_mixer", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "mix_02": { "nama": "Allen & Heath QU-16", "kategori": "kat_mixer", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "mix_03": { "nama": "Allen & Heath CQ-18T", "kategori": "kat_mixer", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 1, "stok_tersedia": 0 },
+
+    "spk_01": { "nama": "Mackie Thump 15A", "kategori": "kat_speaker", "stok_total": 4, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 4 },
+    "spk_02": { "nama": "Mackie Thump 12A", "kategori": "kat_speaker", "stok_total": 2, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 2 },
+    "spk_03": { "nama": "Yamaha MSR 400", "kategori": "kat_speaker", "stok_total": 6, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 6 },
+
+    "mus_01": { "nama": "Gitar Yamaha", "kategori": "kat_musik", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "mus_02": { "nama": "Roland RD 700 NX", "kategori": "kat_musik", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "mus_03": { "nama": "Yamaha PSR 900", "kategori": "kat_musik", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "mus_04": { "nama": "Yamaha PSR 800", "kategori": "kat_musik", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+
+    "mic_01": { "nama": "SPL audio wireless isi 2", "kategori": "kat_mic", "stok_total": 5, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 5 },
+    "mic_02": { "nama": "Sennheisser wireless isi 1", "kategori": "kat_mic", "stok_total": 8, "stok_rusak": 0, "stok_dipinjam": 1, "stok_tersedia": 7 },
+    "mic_03": { "nama": "Sennheisser wireless headworn", "kategori": "kat_mic", "stok_total": 4, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 4 },
+    "mic_04": { "nama": "Shure SM58", "kategori": "kat_mic", "stok_total": 10, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 10 },
+
+    "kbl_01": { "nama": "XLR to XLR 3M", "kategori": "kat_kabel", "stok_total": 10, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 10 },
+    "kbl_02": { "nama": "XLR to XLR 5M", "kategori": "kat_kabel", "stok_total": 10, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 10 },
+    "kbl_03": { "nama": "XLR to XLR 10M", "kategori": "kat_kabel", "stok_total": 10, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 10 },
+    "kbl_04": { "nama": "Jack to Jack 3M", "kategori": "kat_kabel", "stok_total": 10, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 10 },
+    "kbl_05": { "nama": "Jack to Jack 5M", "kategori": "kat_kabel", "stok_total": 10, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 10 },
+
+    "lap_01": { "nama": "Lenovo LOQ", "kategori": "kat_laptop", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "lap_02": { "nama": "Lenovo Ideapad Gaming 3", "kategori": "kat_laptop", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 },
+    "lap_03": { "nama": "MSI GF63 thin", "kategori": "kat_laptop", "stok_total": 1, "stok_rusak": 0, "stok_dipinjam": 0, "stok_tersedia": 1 }
+  },
+
+  "transaksi": {
+    "trx_template_001": {
+      "nama_peminjam": "nama peminjam a",
+      "email_peminjam": "email@domain.com",
+      "tanggal_pinjam": "2026-10-05T08:00:00Z",
+      "tanggal_kembali": "2026-10-06T17:00:00Z",
+      "status": "Pending", 
+      "barang_dipinjam": {
+        "mix_03": {
+          "nama_barang": "Allen & Heath CQ-18T",
+          "kategori": "kat_mixer",
+          "jumlah": 1
+        },
+        "mic_02": {
+          "nama_barang": "Sennheisser wireless isi 1",
+          "kategori": "kat_mic",
+          "jumlah": 2
+        }
+      }
+    }
+  }
+}

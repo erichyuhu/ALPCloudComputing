@@ -1,0 +1,83 @@
+/* CSS Variables untuk Tema Terang & Gelap */
+:root {
+    --bg-main: #f3f4f6;
+    --bg-sidebar: #ffffff;
+    --bg-card: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+}
+
+[data-theme="dark"] {
+    --bg-main: #111827;
+    --bg-sidebar: #1f2937;
+    --bg-card: #1f2937;
+    --text-main: #f9fafb;
+    --text-muted: #9ca3af;
+    --border-color: #374151;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body { 
+    background-color: var(--bg-main); 
+    color: var(--text-main); 
+    display: flex; 
+    height: 100vh; 
+    overflow: hidden; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/* Bagian Sidebar */
+.sidebar { width: 260px; background-color: var(--bg-sidebar); border-right: 1px solid var(--border-color); display: flex; flex-direction: column; transition: transform 0.3s ease; z-index: 50; }
+.logo-area { padding: 20px; font-size: 24px; font-weight: bold; color: var(--primary-color); display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border-color); }
+.menu-list { list-style: none; padding: 15px 0; overflow-y: auto; flex: 1; }
+.menu-item { padding: 12px 20px; display: flex; align-items: center; gap: 15px; color: var(--text-main); text-decoration: none; font-size: 15px; transition: background 0.2s; cursor: pointer; }
+.menu-item:hover, .menu-item.active { background-color: var(--bg-main); color: var(--primary-color); border-left: 4px solid var(--primary-color); }
+.menu-item i { width: 20px; text-align: center; color: var(--text-muted); }
+.menu-item.active i { color: var(--primary-color); }
+
+/* Container Sisi Kanan */
+.main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+/* Bagian Topbar */
+.topbar { background-color: var(--bg-sidebar); border-bottom: 1px solid var(--border-color); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+.topbar-left { display: flex; align-items: center; gap: 15px; }
+.menu-toggle { font-size: 20px; cursor: pointer; display: none; color: var(--text-main); }
+.search-bar { background-color: var(--bg-main); border-radius: 8px; padding: 8px 15px; display: flex; align-items: center; gap: 10px; width: 300px; border: 1px solid var(--border-color); }
+.search-bar input { border: none; background: transparent; outline: none; width: 100%; color: var(--text-main); }
+
+.topbar-right { display: flex; align-items: center; gap: 20px; }
+.icon-btn { cursor: pointer; font-size: 18px; color: var(--text-muted); transition: color 0.2s; background: none; border: none; }
+.icon-btn:hover { color: var(--primary-color); }
+.profile-pic { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border-color); cursor: pointer;}
+
+/* Area Konten Utama */
+.content-body { padding: 20px; overflow-y: auto; flex: 1; }
+
+.table-container { background-color: var(--bg-card); border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid var(--border-color); }
+.table-title { font-size: 18px; font-weight: bold; margin-bottom: 15px; color: var(--text-main); }
+
+.table-responsive { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 700px; }
+th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border-color); color: var(--text-main); }
+th { background-color: var(--bg-main); font-weight: 600; color: var(--text-muted); }
+
+.status-badge { padding: 5px 10px; border-radius: 50px; font-size: 12px; font-weight: bold; }
+.status-pending { background-color: #fef3c7; color: #d97706; }
+.status-dipinjam { background-color: #dbeafe; color: #2563eb; }
+.status-rusak { background-color: #fee2e2; color: #dc2626; }
+
+/* Responsivitas */
+@media (max-width: 992px) {
+    .search-bar { width: 200px; }
+}
+
+@media (max-width: 768px) {
+    .sidebar { position: absolute; height: 100%; transform: translateX(-100%); box-shadow: 2px 0 5px rgba(0,0,0,0.1); }
+    .sidebar.open { transform: translateX(0); }
+    .menu-toggle { display: block; }
+    .search-bar { display: none; } 
+}

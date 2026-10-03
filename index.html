@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Inventaris</title>
+    <!-- Menggunakan FontAwesome via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Menghubungkan ke file CSS eksternal -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Area Sidebar Kiri -->
+    <div id="sidebar-container"></div>
+
+    <!-- Area Konten Utama Kanan -->
+    <main class="main-content">
+        <!-- Topbar Atas -->
+        <div id="topbar-container"></div>
+
+        <!-- Area Scroll Tabel -->
+        <section class="content-body">
+            
+            <!-- Tabel 1: Peminjaman -->
+            <div class="table-container">
+                <h2 class="table-title">Daftar Peminjaman Aktif</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID Transaksi</th>
+                                <th>Nama Peminjam</th>
+                                <th>Barang</th>
+                                <th>Tanggal Pinjam</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data-peminjaman">
+                            <tr>
+                                <td colspan="6" style="text-align: center;">Memuat data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <h2 style="margin-bottom: 15px;">Daftar Barang Rusak</h2>
+                <!-- Dropdown Pemilihan Limit -->
+                <div style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                    <label for="limit-barang-rusak" style="font-weight: bold;">Tampilkan:</label>
+                    <select id="limit-barang-rusak" style="padding: 5px; border-radius: 5px;">
+                        <option value="5" selected>5</option>
+                        <option value="10">10</option>
+                        <option value="50">50</option>
+                        <option value="all">Semua</option>
+                    </select>
+                    <span>data</span>
+                </div>
+
+                <!-- Tabel Barang Rusak -->
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kode</th>
+                                <th>Nama Barang</th>
+                                <th>Kategori</th>
+                                <th>Jumlah Rusak</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data-barang-rusak">
+                            <tr><td colspan="5" style="text-align: center;">Memuat data...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Menghubungkan ke file JavaScript eksternal -->
+    <script src="assets/js/layout.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
+</body>
+</html>
